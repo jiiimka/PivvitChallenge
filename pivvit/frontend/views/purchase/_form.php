@@ -19,8 +19,7 @@ use yii\widgets\ActiveForm;
     $offeringOptions = [];
     $offeringParams = [];
     foreach ($offerings as $offering) {
-        $offeringOptions[$offering->id] = $offering->title;
-        $offeringParams[$offering->id] = ['data-price' => $offering->price];
+        $offeringOptions["$offering->price"] = $offering->title;
     }
     ?>
 
