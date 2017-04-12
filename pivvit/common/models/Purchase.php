@@ -9,7 +9,7 @@ use yii\db\ActiveRecord;
  * @property integer $id
  * @property string $customerName
  * @property integer $offeringID
- * @property string $quantity
+ * @property integer $quantity
  */
 class Purchase extends ActiveRecord {
     /**
@@ -28,7 +28,7 @@ class Purchase extends ActiveRecord {
         return [
             [['customerName', 'offeringID', 'quantity'], 'required'],
             [['customerName',], 'string'],
-            [['offeringID', 'quantity'], 'number'],
+            [['offeringID', 'quantity'], 'integer'],
         ];
     }
 }

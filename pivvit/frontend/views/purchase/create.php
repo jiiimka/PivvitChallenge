@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use \common\models\Offering;
 
 
 /* @var $this yii\web\View */
@@ -16,6 +17,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $this->render('_form', [
         'model' => $model,
+        'offerings' =>Offering::find()->all(),
     ]) ?>
-
 </div>
